@@ -1,4 +1,4 @@
 
 locals {
-    subscription_id = "<< your subscription id >>"
+    subscription_id = "????????"
 }
