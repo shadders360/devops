@@ -39,6 +39,10 @@ generate "versions" {
                 source  = "hashicorp/random"
                 version = ">=3.4.2"
             }
+            instana = {
+                source = "gessnerfl/instana"
+                version = "1.5.2"
+            }
         }
 
     }
@@ -47,6 +51,15 @@ generate "versions" {
         features {}
         subscription_id = "${local.subscription_id}"
     }
+
+    provider "instana" {
+        api_token = var.api_token 
+        endpoint = var.api_endpoint
+        default_name_prefix = ""
+        default_name_suffix = "(TF managed)"
+        tls_skip_verify     = flase
+    }
+
 EOF
 }
 

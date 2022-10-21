@@ -27,3 +27,13 @@ variable deployment_number {
     description = "number indicating the deployment. Incremented if additional deployments required"
    
  }
+
+ variable "api_token"  {
+    type = string
+    description = "instana API token to connect to cloud service via REST api"
+ }
+
+  variable "api_endpoint"  {
+    type = string
+    description = "instana API endpoint URL "
+ }

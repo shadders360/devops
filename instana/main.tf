@@ -16,10 +16,16 @@ terraform {
         }
     }
 
+  
 }
 
 resource "azurerm_resource_group" "resource_rg" {
     name      = "rg-${var.service_name}-${var.environment}-${var.deployment_number}"
     location  = var.location
     tags      = var.default_tags
+}
+
+resource "instana_application_config" "rpa_application" {
+  label              = "AzNonProdRPA"
+  match_specification = "entity.azure.resourcegroup:rg-uipathapps-nonprod-001"
 }
