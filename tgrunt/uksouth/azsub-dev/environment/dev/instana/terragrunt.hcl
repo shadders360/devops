@@ -42,5 +42,5 @@ terraform {
 # Fill in the variables for that module
 inputs = {
     service_name        = "instana"
-    deployment_number   = "002"
+    deployment_number   = "001"
 }

@@ -6,6 +6,7 @@
 
 # Terragrunt
 .terragrunt-cache
+terragrunt-debug.tfvars.json
 
 # OS X
 .history
@@ -20,3 +21,5 @@
 build/
 */build/
 out/
+
+local.notes.md

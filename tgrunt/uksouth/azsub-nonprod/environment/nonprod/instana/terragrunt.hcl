@@ -36,5 +36,7 @@ terraform {
 # Fill in the variables for that module
 inputs = {
     service_name="instana"
-    deployment_number="${local.environment}"
+    deployment_number="001"
+    # api_endpoint = "abc.instana.io"
+    # api_token = "xxxxxxxx"
 }

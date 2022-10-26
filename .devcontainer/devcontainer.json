@@ -50,7 +50,8 @@
 					"ms-vscode.azurecli",
 					"ms-azuretools.vscode-azureterraform",
 					"ms-azuretools.vscode-docker",
-                    "eamodio.gitlens"
+                    "eamodio.gitlens",
+                    "ms-vscode.vscode-node-azure-pack"
 				]
 		}
 	},

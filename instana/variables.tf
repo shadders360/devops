@@ -4,6 +4,7 @@ variable location         {
 
  }
 
+
  variable environment         {
     type = string
     description = "environment for the service"
