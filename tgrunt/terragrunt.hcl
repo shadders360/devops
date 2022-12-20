@@ -55,14 +55,6 @@ generate "versions" {
         subscription_id = "${local.subscription_id}"
     }
 
-    provider "instana" {
-        api_token = var.api_token 
-        endpoint = var.api_endpoint
-        default_name_prefix = ""
-        default_name_suffix = "(TF managed)"
-        tls_skip_verify     = false
-    }
-
 EOF
 }
 

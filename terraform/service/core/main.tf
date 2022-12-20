@@ -19,10 +19,3 @@ terraform {
   
 }
 
-
-resource "instana_application_config" "rpa_application" {
-  label              = "AzSubRpaNonProd"
-  scope               = "INCLUDE_ALL_DOWNSTREAM"  #Optional, default = INCLUDE_NO_DOWNSTREAM
-  boundary_scope      = "INBOUND"  #Optional, default = INBOUND
-  tag_filter       =  "cloud.azure.zone EQUALS 'uksouth'"
-}
