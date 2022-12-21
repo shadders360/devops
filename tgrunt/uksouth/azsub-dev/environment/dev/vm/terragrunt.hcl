@@ -5,8 +5,8 @@
 # ---------------------------------------------------------------------------------------------------------------------
 locals {
     tags = {
-        service_code  = "776"
-        service_name  = "instana-web"
+        service_code  = "150"
+        service_name  = "vms"
     }
 
 }
@@ -36,11 +36,11 @@ include "root" {
 
 # Use Terragrunt to download the module code
 terraform {
-    source = "../../../../../../instana"
+    source = "../../../../../../vms"
 }
 
 # Fill in the variables for that module
 inputs = {
-    service_name        = "instana"
+    service_name        = "vms"
     deployment_number   = "001"
 }

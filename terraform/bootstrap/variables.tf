@@ -2,17 +2,6 @@ variable location         {
     type = string
     description = "Azure Region location code"
     default = "uksouth"
- }
-
- variable environment         {
-    type = string
-    description = "environment for the service"
- 
- }
-
-variable service_name {
-    type = string
-    description = "logical service name of the component within the deployment"
 
  }
 

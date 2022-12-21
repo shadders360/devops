@@ -9,7 +9,7 @@ locals {
     # Automatically load environment-level variables
     environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
-    storage_account_name = "strpa${local.environment}tfstates"
+    storage_account_name = "stcore${local.environment}tfstates"
 
     location          = local.region_vars.locals.location
     environment       = local.environment_vars.locals.environment
@@ -42,10 +42,6 @@ generate "versions" {
                 source  = "hashicorp/random"
                 version = ">=3.4.2"
             }
-            instana = {
-                source = "gessnerfl/instana"
-                version = "1.5.2"
-            }
         }
 
     }
@@ -63,7 +59,7 @@ remote_state {
     config = {
         subscription_id = "${local.subscription_id}"
         key = "${path_relative_to_include()}/terraform.tfstate"
-        resource_group_name = "dvla-rpa-tfstate-rg"
+        resource_group_name = "rg-bootstrap-f83e63ed88b52468"
         storage_account_name = local.storage_account_name
         container_name = "environment-states"
     }
