@@ -27,10 +27,10 @@ provider "azurerm" {
 }
 
 resource "azurecaf_name" "bootstrap_name" {
-    name            = "shadware"
+    name            = "      "
     resource_types  = [ "azurerm_resource_group", "azurerm_storage_account" ]
     # prefixes        = ["a", "b"]
-    suffixes        = ["us", "001"]
+    suffixes        = ["y", "001"]
     random_length   = 5
     clean_input     = true
 }

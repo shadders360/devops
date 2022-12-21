@@ -29,3 +29,15 @@ Stop-AzVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName
 
 Get-AzResource -ResourceGroupName $vm.ResourceGroupName | Format-Table
 Remove-AzVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName
+
+
+param([string]$resourceGroup)
+
+$adminCredential = Get-Credential -Message "Enter a username and password for the VM administrator."
+
+For ($i = 1; $i -le 3; $i++)
+{
+    $vmName = "ConferenceDemo" + $i
+    Write-Host "Creating VM: " $vmName
+    New-AzVm -ResourceGroupName $resourceGroup -Name $vmName -Credential $adminCredential -Image UbuntuLTS
+}
